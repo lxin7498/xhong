@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+venv/
+.venv/
+backend/venv/
+
+# Django
+*.sqlite3
+media/
+staticfiles/
+
+# Node / frontend
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+.vite/
+
+# Environment and secrets
+.env
+*.env
+!.env.example
+backend/.env
+my_agent/.env
+frontend/.env
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Agent conversation database
+my_agent/conversations.db
+
+# Local tool state
+.claude/
+.codex/
+.playwright-mcp/
+
+# Temp/debug files
+chat-after-send.txt
+homepage-verification.png
+page-snapshot.txt

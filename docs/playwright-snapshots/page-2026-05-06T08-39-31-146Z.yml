@@ -1,0 +1,27 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "school CS Academy Elite" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e7]: school
+        - generic [ref=e8]: CS Academy Elite
+      - navigation [ref=e9]:
+        - link "首页" [ref=e10] [cursor=pointer]:
+          - /url: /
+        - link "资源广场" [ref=e11] [cursor=pointer]:
+          - /url: /resources
+        - link "个人中心" [ref=e12] [cursor=pointer]:
+          - /url: /profile
+      - generic [ref=e13]:
+        - button "dark_mode" [ref=e14] [cursor=pointer]:
+          - generic [ref=e15]: dark_mode
+        - button "account_circle Student One" [ref=e17] [cursor=pointer]:
+          - generic [ref=e18]: account_circle
+          - generic [ref=e19]: Student One
+  - main [ref=e20]
+  - contentinfo [ref=e21]:
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - generic [ref=e24]: school
+        - generic [ref=e25]: CS Academy Elite
+      - paragraph [ref=e26]: 个性化学习资源推荐系统 © 2026

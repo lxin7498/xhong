@@ -1,0 +1,121 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "school CS Academy Elite" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e7]: school
+        - generic [ref=e8]: CS Academy Elite
+      - navigation [ref=e9]:
+        - link "首页" [ref=e10] [cursor=pointer]:
+          - /url: /
+      - generic [ref=e11]:
+        - button "light_mode" [ref=e12] [cursor=pointer]:
+          - generic [ref=e13]: light_mode
+        - button "account_circle Student One" [ref=e15] [cursor=pointer]:
+          - generic [ref=e16]: account_circle
+          - generic [ref=e17]: Student One
+  - main [ref=e18]:
+    - generic [ref=e20]:
+      - heading "个人中心" [level=1] [ref=e21]
+      - generic [ref=e22]:
+        - generic [ref=e24]:
+          - generic [ref=e26]: person
+          - heading "Student One" [level=3] [ref=e27]
+          - paragraph [ref=e28]: Computer Science
+        - generic [ref=e30]:
+          - tablist [ref=e34]:
+            - tab "基本信息" [selected] [ref=e36]
+            - tab "修改密码" [ref=e37]
+            - tab "浏览历史" [ref=e38]
+            - tab "我的收藏" [ref=e39]
+            - tab "我的评分" [ref=e40]
+          - generic [ref=e41]:
+            - tabpanel "基本信息" [ref=e42]:
+              - generic [ref=e44]:
+                - generic [ref=e45]:
+                  - generic [ref=e47]:
+                    - generic [ref=e48]: 用户名
+                    - textbox "用户名" [disabled] [ref=e52]: student1
+                  - generic [ref=e54]:
+                    - generic [ref=e55]: 昵称
+                    - textbox "昵称" [ref=e59]:
+                      - /placeholder: 给自己起个名字
+                      - text: Student One
+                - generic [ref=e60]:
+                  - generic [ref=e61]: 邮箱
+                  - textbox "邮箱" [ref=e65]:
+                    - /placeholder: 请输入邮箱
+                    - text: stu@example.com
+                - generic [ref=e66]:
+                  - generic [ref=e68]:
+                    - generic [ref=e69]: 专业
+                    - textbox "专业" [ref=e73]:
+                      - /placeholder: 如：计算机科学
+                      - text: Computer Science
+                  - generic [ref=e75]:
+                    - generic [ref=e76]: 年级
+                    - generic [ref=e79] [cursor=pointer]:
+                      - generic:
+                        - combobox "年级" [ref=e81]
+                        - generic [ref=e82]: Junior
+                      - img [ref=e85]
+                - generic [ref=e87]:
+                  - generic [ref=e88]: 兴趣标签
+                  - group "兴趣标签" [ref=e90]:
+                    - generic [ref=e91] [cursor=pointer]:
+                      - generic [ref=e92]:
+                        - checkbox "Python" [checked]
+                      - generic [ref=e94]: Python
+                    - generic [ref=e95] [cursor=pointer]:
+                      - generic [ref=e96]:
+                        - checkbox "Java"
+                      - generic [ref=e98]: Java
+                    - generic [ref=e99] [cursor=pointer]:
+                      - generic [ref=e100]:
+                        - checkbox "C++"
+                      - generic [ref=e102]: C++
+                    - generic [ref=e103] [cursor=pointer]:
+                      - generic [ref=e104]:
+                        - checkbox "数据结构"
+                      - generic [ref=e106]: 数据结构
+                    - generic [ref=e107] [cursor=pointer]:
+                      - generic [ref=e108]:
+                        - checkbox "算法"
+                      - generic [ref=e110]: 算法
+                    - generic [ref=e111] [cursor=pointer]:
+                      - generic [ref=e112]:
+                        - checkbox "机器学习"
+                      - generic [ref=e114]: 机器学习
+                    - generic [ref=e115] [cursor=pointer]:
+                      - generic [ref=e116]:
+                        - checkbox "深度学习"
+                      - generic [ref=e118]: 深度学习
+                    - generic [ref=e119] [cursor=pointer]:
+                      - generic [ref=e120]:
+                        - checkbox "前端"
+                      - generic [ref=e122]: 前端
+                    - generic [ref=e123] [cursor=pointer]:
+                      - generic [ref=e124]:
+                        - checkbox "数据库"
+                      - generic [ref=e126]: 数据库
+                    - generic [ref=e127] [cursor=pointer]:
+                      - generic [ref=e128]:
+                        - checkbox "操作系统"
+                      - generic [ref=e130]: 操作系统
+                    - generic [ref=e131] [cursor=pointer]:
+                      - generic [ref=e132]:
+                        - checkbox "计算机网络"
+                      - generic [ref=e134]: 计算机网络
+                    - generic [ref=e135] [cursor=pointer]:
+                      - generic [ref=e136]:
+                        - checkbox "人工智能"
+                      - generic [ref=e138]: 人工智能
+                - button "保存修改" [ref=e141] [cursor=pointer]:
+                  - generic [ref=e142]: 保存修改
+            - text: "* * *"
+  - contentinfo [ref=e143]:
+    - generic [ref=e144]:
+      - generic [ref=e145]:
+        - generic [ref=e146]: school
+        - generic [ref=e147]: CS Academy Elite
+      - paragraph [ref=e148]: 个性化学习资源推荐系统 © 2026
