@@ -1,0 +1,455 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "school CS Academy Elite" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e7]: school
+        - generic [ref=e8]: CS Academy Elite
+      - navigation [ref=e9]:
+        - link "首页" [ref=e10] [cursor=pointer]:
+          - /url: /
+      - generic [ref=e11]:
+        - button "dark_mode" [ref=e12] [cursor=pointer]:
+          - generic [ref=e13]: dark_mode
+        - button "account_circle Student One" [ref=e15] [cursor=pointer]:
+          - generic [ref=e16]: account_circle
+          - generic [ref=e17]: Student One
+  - main [ref=e18]:
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - heading "发现你的学习路径" [level=1] [ref=e22]
+        - paragraph [ref=e23]: 基于协同过滤算法，为你推荐最合适的计算机学习资源
+        - generic [ref=e26]:
+          - img [ref=e29]
+          - textbox "搜索资源..." [ref=e31]
+      - generic [ref=e32]:
+        - heading "热门资源" [level=2] [ref=e34]
+        - generic [ref=e35]:
+          - link "操作系统原理 - 进程与线程 视频 操作系统原理 - 进程与线程 理解操作系统中进程管理、线程模型、CPU调度算法和同步互斥机制。 操作系统 进程 线程 中级 操作系统 star 3.2 visibility 483" [ref=e36] [cursor=pointer]:
+            - /url: /resource/19
+            - generic [ref=e37]:
+              - img "操作系统原理 - 进程与线程" [ref=e38]
+              - generic [ref=e39]: 视频
+            - generic [ref=e40]:
+              - heading "操作系统原理 - 进程与线程" [level=3] [ref=e41]
+              - paragraph [ref=e42]: 理解操作系统中进程管理、线程模型、CPU调度算法和同步互斥机制。
+              - generic [ref=e43]:
+                - generic [ref=e44]: 操作系统
+                - generic [ref=e45]: 进程
+                - generic [ref=e46]: 线程
+              - generic [ref=e47]:
+                - generic [ref=e48]:
+                  - generic [ref=e49]: 中级
+                  - generic [ref=e50]: 操作系统
+                - generic [ref=e51]:
+                  - generic [ref=e52]:
+                    - generic [ref=e53]: star
+                    - text: "3.2"
+                  - generic [ref=e54]:
+                    - generic [ref=e55]: visibility
+                    - text: "483"
+          - link "前端开发入门 - HTML/CSS/JavaScript 视频 前端开发入门 - HTML/CSS/JavaScript 从零学习前端三大核心技术，掌握网页布局、样式设计和交互开发的基础知识。 前端 HTML CSS 初级 前端 star 4 visibility 470" [ref=e56] [cursor=pointer]:
+            - /url: /resource/20
+            - generic [ref=e57]:
+              - img "前端开发入门 - HTML/CSS/JavaScript" [ref=e58]
+              - generic [ref=e59]: 视频
+            - generic [ref=e60]:
+              - heading "前端开发入门 - HTML/CSS/JavaScript" [level=3] [ref=e61]
+              - paragraph [ref=e62]: 从零学习前端三大核心技术，掌握网页布局、样式设计和交互开发的基础知识。
+              - generic [ref=e63]:
+                - generic [ref=e64]: 前端
+                - generic [ref=e65]: HTML
+                - generic [ref=e66]: CSS
+              - generic [ref=e67]:
+                - generic [ref=e68]:
+                  - generic [ref=e69]: 初级
+                  - generic [ref=e70]: 前端
+                - generic [ref=e71]:
+                  - generic [ref=e72]:
+                    - generic [ref=e73]: star
+                    - text: "4"
+                  - generic [ref=e74]:
+                    - generic [ref=e75]: visibility
+                    - text: "470"
+          - link "Java面向对象编程深入 文章 Java面向对象编程深入 深入理解Java的封装、继承、多态机制，以及接口、抽象类、内部类等高级特性。 Java 面向对象 编程基础 中级 Java star 4.1 visibility 463" [ref=e76] [cursor=pointer]:
+            - /url: /resource/17
+            - generic [ref=e77]:
+              - img "Java面向对象编程深入" [ref=e78]
+              - generic [ref=e79]: 文章
+            - generic [ref=e80]:
+              - heading "Java面向对象编程深入" [level=3] [ref=e81]
+              - paragraph [ref=e82]: 深入理解Java的封装、继承、多态机制，以及接口、抽象类、内部类等高级特性。
+              - generic [ref=e83]:
+                - generic [ref=e84]: Java
+                - generic [ref=e85]: 面向对象
+                - generic [ref=e86]: 编程基础
+              - generic [ref=e87]:
+                - generic [ref=e88]:
+                  - generic [ref=e89]: 中级
+                  - generic [ref=e90]: Java
+                - generic [ref=e91]:
+                  - generic [ref=e92]:
+                    - generic [ref=e93]: star
+                    - text: "4.1"
+                  - generic [ref=e94]:
+                    - generic [ref=e95]: visibility
+                    - text: "463"
+          - link "机器学习实战 - 手写数字识别 练习 机器学习实战 - 手写数字识别 使用TensorFlow和MNIST数据集，从零搭建神经网络完成手写数字识别任务。 机器学习 深度学习 TensorFlow 高级 机器学习 star 3.9 visibility 388" [ref=e96] [cursor=pointer]:
+            - /url: /resource/15
+            - generic [ref=e97]:
+              - img "机器学习实战 - 手写数字识别" [ref=e98]
+              - generic [ref=e99]: 练习
+            - generic [ref=e100]:
+              - heading "机器学习实战 - 手写数字识别" [level=3] [ref=e101]
+              - paragraph [ref=e102]: 使用TensorFlow和MNIST数据集，从零搭建神经网络完成手写数字识别任务。
+              - generic [ref=e103]:
+                - generic [ref=e104]: 机器学习
+                - generic [ref=e105]: 深度学习
+                - generic [ref=e106]: TensorFlow
+              - generic [ref=e107]:
+                - generic [ref=e108]:
+                  - generic [ref=e109]: 高级
+                  - generic [ref=e110]: 机器学习
+                - generic [ref=e111]:
+                  - generic [ref=e112]:
+                    - generic [ref=e113]: star
+                    - text: "3.9"
+                  - generic [ref=e114]:
+                    - generic [ref=e115]: visibility
+                    - text: "388"
+          - link "计算机网络基础 - TCP/IP协议栈 视频 计算机网络基础 - TCP/IP协议栈 详解TCP/IP五层模型，包括应用层、传输层、网络层、数据链路层和物理层的工作原理。 计算机网络 TCP/IP 协议 初级 计算机网络 star 4.3 visibility 366" [ref=e116] [cursor=pointer]:
+            - /url: /resource/16
+            - generic [ref=e117]:
+              - img "计算机网络基础 - TCP/IP协议栈" [ref=e118]
+              - generic [ref=e119]: 视频
+            - generic [ref=e120]:
+              - heading "计算机网络基础 - TCP/IP协议栈" [level=3] [ref=e121]
+              - paragraph [ref=e122]: 详解TCP/IP五层模型，包括应用层、传输层、网络层、数据链路层和物理层的工作原理。
+              - generic [ref=e123]:
+                - generic [ref=e124]: 计算机网络
+                - generic [ref=e125]: TCP/IP
+                - generic [ref=e126]: 协议
+              - generic [ref=e127]:
+                - generic [ref=e128]:
+                  - generic [ref=e129]: 初级
+                  - generic [ref=e130]: 计算机网络
+                - generic [ref=e131]:
+                  - generic [ref=e132]:
+                    - generic [ref=e133]: star
+                    - text: "4.3"
+                  - generic [ref=e134]:
+                    - generic [ref=e135]: visibility
+                    - text: "366"
+          - link "Python入门教程 - 从零开始学编程 视频 Python入门教程 - 从零开始学编程 面向初学者的Python完整教程，涵盖基本语法、数据结构和函数编程。包含大量实例和练习。 Python 基础 编程入门 初级 Python star 4.4 visibility 352" [ref=e136] [cursor=pointer]:
+            - /url: /resource/13
+            - generic [ref=e137]:
+              - img "Python入门教程 - 从零开始学编程" [ref=e138]
+              - generic [ref=e139]: 视频
+            - generic [ref=e140]:
+              - heading "Python入门教程 - 从零开始学编程" [level=3] [ref=e141]
+              - paragraph [ref=e142]: 面向初学者的Python完整教程，涵盖基本语法、数据结构和函数编程。包含大量实例和练习。
+              - generic [ref=e143]:
+                - generic [ref=e144]: Python
+                - generic [ref=e145]: 基础
+                - generic [ref=e146]: 编程入门
+              - generic [ref=e147]:
+                - generic [ref=e148]:
+                  - generic [ref=e149]: 初级
+                  - generic [ref=e150]: Python
+                - generic [ref=e151]:
+                  - generic [ref=e152]:
+                    - generic [ref=e153]: star
+                    - text: "4.4"
+                  - generic [ref=e154]:
+                    - generic [ref=e155]: visibility
+                    - text: "352"
+          - link "数据结构与算法精讲 文章 数据结构与算法精讲 系统学习常见数据结构：数组、链表、栈、队列、树、图，以及排序、查找等经典算法。 数据结构 算法 面试 中级 数据结构 star 3.2 visibility 344" [ref=e156] [cursor=pointer]:
+            - /url: /resource/14
+            - generic [ref=e157]:
+              - img "数据结构与算法精讲" [ref=e158]
+              - generic [ref=e159]: 文章
+            - generic [ref=e160]:
+              - heading "数据结构与算法精讲" [level=3] [ref=e161]
+              - paragraph [ref=e162]: 系统学习常见数据结构：数组、链表、栈、队列、树、图，以及排序、查找等经典算法。
+              - generic [ref=e163]:
+                - generic [ref=e164]: 数据结构
+                - generic [ref=e165]: 算法
+                - generic [ref=e166]: 面试
+              - generic [ref=e167]:
+                - generic [ref=e168]:
+                  - generic [ref=e169]: 中级
+                  - generic [ref=e170]: 数据结构
+                - generic [ref=e171]:
+                  - generic [ref=e172]:
+                    - generic [ref=e173]: star
+                    - text: "3.2"
+                  - generic [ref=e174]:
+                    - generic [ref=e175]: visibility
+                    - text: "344"
+          - link "LeetCode刷题指南 - 动态规划专题 练习 LeetCode刷题指南 - 动态规划专题 系统讲解动态规划解题思路，包含50+经典题目详解和代码实现。 算法 动态规划 LeetCode 高级 算法 star 4.3 visibility 185" [ref=e176] [cursor=pointer]:
+            - /url: /resource/23
+            - generic [ref=e177]:
+              - img "LeetCode刷题指南 - 动态规划专题" [ref=e178]
+              - generic [ref=e179]: 练习
+            - generic [ref=e180]:
+              - heading "LeetCode刷题指南 - 动态规划专题" [level=3] [ref=e181]
+              - paragraph [ref=e182]: 系统讲解动态规划解题思路，包含50+经典题目详解和代码实现。
+              - generic [ref=e183]:
+                - generic [ref=e184]: 算法
+                - generic [ref=e185]: 动态规划
+                - generic [ref=e186]: LeetCode
+              - generic [ref=e187]:
+                - generic [ref=e188]:
+                  - generic [ref=e189]: 高级
+                  - generic [ref=e190]: 算法
+                - generic [ref=e191]:
+                  - generic [ref=e192]:
+                    - generic [ref=e193]: star
+                    - text: "4.3"
+                  - generic [ref=e194]:
+                    - generic [ref=e195]: visibility
+                    - text: "185"
+          - link "人工智能导论 - 从图灵测试到GPT 文章 人工智能导论 - 从图灵测试到GPT 全面了解人工智能的发展历史、核心概念和前沿技术，适合AI入门学习者。 人工智能 AI GPT 初级 人工智能 star 3.3 visibility 177" [ref=e196] [cursor=pointer]:
+            - /url: /resource/24
+            - generic [ref=e197]:
+              - img "人工智能导论 - 从图灵测试到GPT" [ref=e198]
+              - generic [ref=e199]: 文章
+            - generic [ref=e200]:
+              - heading "人工智能导论 - 从图灵测试到GPT" [level=3] [ref=e201]
+              - paragraph [ref=e202]: 全面了解人工智能的发展历史、核心概念和前沿技术，适合AI入门学习者。
+              - generic [ref=e203]:
+                - generic [ref=e204]: 人工智能
+                - generic [ref=e205]: AI
+                - generic [ref=e206]: GPT
+              - generic [ref=e207]:
+                - generic [ref=e208]:
+                  - generic [ref=e209]: 初级
+                  - generic [ref=e210]: 人工智能
+                - generic [ref=e211]:
+                  - generic [ref=e212]:
+                    - generic [ref=e213]: star
+                    - text: "3.3"
+                  - generic [ref=e214]:
+                    - generic [ref=e215]: visibility
+                    - text: "177"
+      - generic [ref=e216]:
+        - heading "最新资源" [level=2] [ref=e218]
+        - generic [ref=e219]:
+          - link "人工智能导论 - 从图灵测试到GPT 文章 人工智能导论 - 从图灵测试到GPT 全面了解人工智能的发展历史、核心概念和前沿技术，适合AI入门学习者。 人工智能 AI GPT 初级 人工智能 star 3.3 visibility 177" [ref=e220] [cursor=pointer]:
+            - /url: /resource/24
+            - generic [ref=e221]:
+              - img "人工智能导论 - 从图灵测试到GPT" [ref=e222]
+              - generic [ref=e223]: 文章
+            - generic [ref=e224]:
+              - heading "人工智能导论 - 从图灵测试到GPT" [level=3] [ref=e225]
+              - paragraph [ref=e226]: 全面了解人工智能的发展历史、核心概念和前沿技术，适合AI入门学习者。
+              - generic [ref=e227]:
+                - generic [ref=e228]: 人工智能
+                - generic [ref=e229]: AI
+                - generic [ref=e230]: GPT
+              - generic [ref=e231]:
+                - generic [ref=e232]:
+                  - generic [ref=e233]: 初级
+                  - generic [ref=e234]: 人工智能
+                - generic [ref=e235]:
+                  - generic [ref=e236]:
+                    - generic [ref=e237]: star
+                    - text: "3.3"
+                  - generic [ref=e238]:
+                    - generic [ref=e239]: visibility
+                    - text: "177"
+          - link "LeetCode刷题指南 - 动态规划专题 练习 LeetCode刷题指南 - 动态规划专题 系统讲解动态规划解题思路，包含50+经典题目详解和代码实现。 算法 动态规划 LeetCode 高级 算法 star 4.3 visibility 185" [ref=e240] [cursor=pointer]:
+            - /url: /resource/23
+            - generic [ref=e241]:
+              - img "LeetCode刷题指南 - 动态规划专题" [ref=e242]
+              - generic [ref=e243]: 练习
+            - generic [ref=e244]:
+              - heading "LeetCode刷题指南 - 动态规划专题" [level=3] [ref=e245]
+              - paragraph [ref=e246]: 系统讲解动态规划解题思路，包含50+经典题目详解和代码实现。
+              - generic [ref=e247]:
+                - generic [ref=e248]: 算法
+                - generic [ref=e249]: 动态规划
+                - generic [ref=e250]: LeetCode
+              - generic [ref=e251]:
+                - generic [ref=e252]:
+                  - generic [ref=e253]: 高级
+                  - generic [ref=e254]: 算法
+                - generic [ref=e255]:
+                  - generic [ref=e256]:
+                    - generic [ref=e257]: star
+                    - text: "4.3"
+                  - generic [ref=e258]:
+                    - generic [ref=e259]: visibility
+                    - text: "185"
+          - link "深度学习入门 - 卷积神经网络 视频 深度学习入门 - 卷积神经网络 从CNN基础原理到实际应用，包括图像分类、目标检测和迁移学习。 深度学习 CNN 图像处理 高级 深度学习 star 4 visibility 170" [ref=e260] [cursor=pointer]:
+            - /url: /resource/22
+            - generic [ref=e261]:
+              - img "深度学习入门 - 卷积神经网络" [ref=e262]
+              - generic [ref=e263]: 视频
+            - generic [ref=e264]:
+              - heading "深度学习入门 - 卷积神经网络" [level=3] [ref=e265]
+              - paragraph [ref=e266]: 从CNN基础原理到实际应用，包括图像分类、目标检测和迁移学习。
+              - generic [ref=e267]:
+                - generic [ref=e268]: 深度学习
+                - generic [ref=e269]: CNN
+                - generic [ref=e270]: 图像处理
+              - generic [ref=e271]:
+                - generic [ref=e272]:
+                  - generic [ref=e273]: 高级
+                  - generic [ref=e274]: 深度学习
+                - generic [ref=e275]:
+                  - generic [ref=e276]:
+                    - generic [ref=e277]: star
+                    - text: "4"
+                  - generic [ref=e278]:
+                    - generic [ref=e279]: visibility
+                    - text: "170"
+          - link "SQL数据库设计与优化 文章 SQL数据库设计与优化 学习关系型数据库的范式设计、索引优化、查询性能调优和事务管理。 数据库 SQL 性能优化 中级 数据库 star 3 visibility 82" [ref=e280] [cursor=pointer]:
+            - /url: /resource/21
+            - generic [ref=e281]:
+              - img "SQL数据库设计与优化" [ref=e282]
+              - generic [ref=e283]: 文章
+            - generic [ref=e284]:
+              - heading "SQL数据库设计与优化" [level=3] [ref=e285]
+              - paragraph [ref=e286]: 学习关系型数据库的范式设计、索引优化、查询性能调优和事务管理。
+              - generic [ref=e287]:
+                - generic [ref=e288]: 数据库
+                - generic [ref=e289]: SQL
+                - generic [ref=e290]: 性能优化
+              - generic [ref=e291]:
+                - generic [ref=e292]:
+                  - generic [ref=e293]: 中级
+                  - generic [ref=e294]: 数据库
+                - generic [ref=e295]:
+                  - generic [ref=e296]:
+                    - generic [ref=e297]: star
+                    - text: "3"
+                  - generic [ref=e298]:
+                    - generic [ref=e299]: visibility
+                    - text: "82"
+          - link "前端开发入门 - HTML/CSS/JavaScript 视频 前端开发入门 - HTML/CSS/JavaScript 从零学习前端三大核心技术，掌握网页布局、样式设计和交互开发的基础知识。 前端 HTML CSS 初级 前端 star 4 visibility 470" [ref=e300] [cursor=pointer]:
+            - /url: /resource/20
+            - generic [ref=e301]:
+              - img "前端开发入门 - HTML/CSS/JavaScript" [ref=e302]
+              - generic [ref=e303]: 视频
+            - generic [ref=e304]:
+              - heading "前端开发入门 - HTML/CSS/JavaScript" [level=3] [ref=e305]
+              - paragraph [ref=e306]: 从零学习前端三大核心技术，掌握网页布局、样式设计和交互开发的基础知识。
+              - generic [ref=e307]:
+                - generic [ref=e308]: 前端
+                - generic [ref=e309]: HTML
+                - generic [ref=e310]: CSS
+              - generic [ref=e311]:
+                - generic [ref=e312]:
+                  - generic [ref=e313]: 初级
+                  - generic [ref=e314]: 前端
+                - generic [ref=e315]:
+                  - generic [ref=e316]:
+                    - generic [ref=e317]: star
+                    - text: "4"
+                  - generic [ref=e318]:
+                    - generic [ref=e319]: visibility
+                    - text: "470"
+          - link "操作系统原理 - 进程与线程 视频 操作系统原理 - 进程与线程 理解操作系统中进程管理、线程模型、CPU调度算法和同步互斥机制。 操作系统 进程 线程 中级 操作系统 star 3.2 visibility 483" [ref=e320] [cursor=pointer]:
+            - /url: /resource/19
+            - generic [ref=e321]:
+              - img "操作系统原理 - 进程与线程" [ref=e322]
+              - generic [ref=e323]: 视频
+            - generic [ref=e324]:
+              - heading "操作系统原理 - 进程与线程" [level=3] [ref=e325]
+              - paragraph [ref=e326]: 理解操作系统中进程管理、线程模型、CPU调度算法和同步互斥机制。
+              - generic [ref=e327]:
+                - generic [ref=e328]: 操作系统
+                - generic [ref=e329]: 进程
+                - generic [ref=e330]: 线程
+              - generic [ref=e331]:
+                - generic [ref=e332]:
+                  - generic [ref=e333]: 中级
+                  - generic [ref=e334]: 操作系统
+                - generic [ref=e335]:
+                  - generic [ref=e336]:
+                    - generic [ref=e337]: star
+                    - text: "3.2"
+                  - generic [ref=e338]:
+                    - generic [ref=e339]: visibility
+                    - text: "483"
+          - link "C++ STL源码剖析 文章 C++ STL源码剖析 深入分析C++标准模板库的vector、list、map等容器的底层实现原理。 C++ STL 源码分析 高级 C++ star 3.8 visibility 133" [ref=e340] [cursor=pointer]:
+            - /url: /resource/18
+            - generic [ref=e341]:
+              - img "C++ STL源码剖析" [ref=e342]
+              - generic [ref=e343]: 文章
+            - generic [ref=e344]:
+              - heading "C++ STL源码剖析" [level=3] [ref=e345]
+              - paragraph [ref=e346]: 深入分析C++标准模板库的vector、list、map等容器的底层实现原理。
+              - generic [ref=e347]:
+                - generic [ref=e348]: C++
+                - generic [ref=e349]: STL
+                - generic [ref=e350]: 源码分析
+              - generic [ref=e351]:
+                - generic [ref=e352]:
+                  - generic [ref=e353]: 高级
+                  - generic [ref=e354]: C++
+                - generic [ref=e355]:
+                  - generic [ref=e356]:
+                    - generic [ref=e357]: star
+                    - text: "3.8"
+                  - generic [ref=e358]:
+                    - generic [ref=e359]: visibility
+                    - text: "133"
+          - link "Java面向对象编程深入 文章 Java面向对象编程深入 深入理解Java的封装、继承、多态机制，以及接口、抽象类、内部类等高级特性。 Java 面向对象 编程基础 中级 Java star 4.1 visibility 463" [ref=e360] [cursor=pointer]:
+            - /url: /resource/17
+            - generic [ref=e361]:
+              - img "Java面向对象编程深入" [ref=e362]
+              - generic [ref=e363]: 文章
+            - generic [ref=e364]:
+              - heading "Java面向对象编程深入" [level=3] [ref=e365]
+              - paragraph [ref=e366]: 深入理解Java的封装、继承、多态机制，以及接口、抽象类、内部类等高级特性。
+              - generic [ref=e367]:
+                - generic [ref=e368]: Java
+                - generic [ref=e369]: 面向对象
+                - generic [ref=e370]: 编程基础
+              - generic [ref=e371]:
+                - generic [ref=e372]:
+                  - generic [ref=e373]: 中级
+                  - generic [ref=e374]: Java
+                - generic [ref=e375]:
+                  - generic [ref=e376]:
+                    - generic [ref=e377]: star
+                    - text: "4.1"
+                  - generic [ref=e378]:
+                    - generic [ref=e379]: visibility
+                    - text: "463"
+          - link "计算机网络基础 - TCP/IP协议栈 视频 计算机网络基础 - TCP/IP协议栈 详解TCP/IP五层模型，包括应用层、传输层、网络层、数据链路层和物理层的工作原理。 计算机网络 TCP/IP 协议 初级 计算机网络 star 4.3 visibility 366" [ref=e380] [cursor=pointer]:
+            - /url: /resource/16
+            - generic [ref=e381]:
+              - img "计算机网络基础 - TCP/IP协议栈" [ref=e382]
+              - generic [ref=e383]: 视频
+            - generic [ref=e384]:
+              - heading "计算机网络基础 - TCP/IP协议栈" [level=3] [ref=e385]
+              - paragraph [ref=e386]: 详解TCP/IP五层模型，包括应用层、传输层、网络层、数据链路层和物理层的工作原理。
+              - generic [ref=e387]:
+                - generic [ref=e388]: 计算机网络
+                - generic [ref=e389]: TCP/IP
+                - generic [ref=e390]: 协议
+              - generic [ref=e391]:
+                - generic [ref=e392]:
+                  - generic [ref=e393]: 初级
+                  - generic [ref=e394]: 计算机网络
+                - generic [ref=e395]:
+                  - generic [ref=e396]:
+                    - generic [ref=e397]: star
+                    - text: "4.3"
+                  - generic [ref=e398]:
+                    - generic [ref=e399]: visibility
+                    - text: "366"
+      - generic [ref=e400]:
+        - heading "为您推荐" [level=2] [ref=e401]
+        - generic [ref=e402]:
+          - generic [ref=e403]: auto_awesome
+          - paragraph [ref=e404]: 推荐功能将在后续阶段实现，敬请期待
+  - contentinfo [ref=e405]:
+    - generic [ref=e406]:
+      - generic [ref=e407]:
+        - generic [ref=e408]: school
+        - generic [ref=e409]: CS Academy Elite
+      - paragraph [ref=e410]: 个性化学习资源推荐系统 © 2026
