@@ -1,7 +1,9 @@
 import axios from 'axios'
 
+const API_BASE = import.meta.env.VITE_API_BASE_URL || '/api'
+
 const client = axios.create({
-  baseURL: '/api',
+  baseURL: API_BASE,
   timeout: 10000,
   headers: { 'Content-Type': 'application/json' },
 })
@@ -22,7 +24,7 @@ client.interceptors.response.use(
       if (refreshToken && !error.config._retry) {
         error.config._retry = true
         try {
-          const { data } = await axios.post('/api/auth/refresh/', { refresh: refreshToken })
+          const { data } = await axios.post(`${API_BASE}/auth/refresh/`, { refresh: refreshToken })
           localStorage.setItem('access_token', data.access)
           error.config.headers.Authorization = `Bearer ${data.access}`
           return client(error.config)

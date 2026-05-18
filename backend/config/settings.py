@@ -38,7 +38,7 @@ SECRET_KEY = os.environ.get(
 
 DEBUG = env_bool("DEBUG", True)
 
-ALLOWED_HOSTS = env_list("ALLOWED_HOSTS", ["127.0.0.1", "localhost"])
+ALLOWED_HOSTS = env_list("ALLOWED_HOSTS", ["127.0.0.1", "localhost", "api.xhong.live"])
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -135,6 +135,6 @@ SIMPLE_JWT = {
 # CORS
 CORS_ALLOWED_ORIGINS = env_list(
     "CORS_ALLOWED_ORIGINS",
-    ["http://localhost:5173", "http://127.0.0.1:5173"],
+    ["http://localhost:5173", "http://127.0.0.1:5173", "https://cs.xhong.live"],
 )
 CORS_ALLOW_CREDENTIALS = True
