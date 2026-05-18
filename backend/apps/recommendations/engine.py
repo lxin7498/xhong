@@ -11,7 +11,7 @@ User = get_user_model()
 
 COLD_START_THRESHOLD = 5
 NEIGHBOR_K = 20
-TOP_N = 20
+TOP_N = 9
 CACHE_TTL = 3600
 
 
