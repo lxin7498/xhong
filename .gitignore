@@ -39,6 +39,8 @@ Thumbs.db
 
 # Agent conversation database
 my_agent/conversations.db
+my_agent/conversations.db-shm
+my_agent/conversations.db-wal
 
 # Local tool state
 .claude/
@@ -49,3 +51,4 @@ my_agent/conversations.db
 chat-after-send.txt
 homepage-verification.png
 page-snapshot.txt
+frontend/recs_test.json
