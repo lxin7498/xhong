@@ -1,3 +1,5 @@
+import random
+
 import numpy as np
 from django.core.cache import cache
 from django.contrib.auth import get_user_model
@@ -80,11 +82,14 @@ def _predict_for_user(target_uid, matrix, user_ids, resource_ids, similarity, us
         predictions.append((resource_ids[j], round(pred, 2)))
 
     predictions.sort(key=lambda x: x[1], reverse=True)
-    return predictions[:TOP_N]
+    # Diversify: randomly sample from top predictions for variety on refresh
+    pool = predictions[: min(len(predictions), TOP_N * 2)]
+    random.shuffle(pool)
+    return pool[:TOP_N]
 
 
 def _cold_start_recommendations():
-    """Popular resources: prefer those with real ratings, then fall back to cached rating_count."""
+    """Popular resources with controlled randomness for variety on refresh."""
     rated = list(
         Resource.objects.annotate(
             rate_count=Count("behaviors", filter=Q(behaviors__behavior_type="rate")),
@@ -93,8 +98,11 @@ def _cold_start_recommendations():
         .order_by("-avg_rating", "-browse_count")
         .values_list("id", flat=True)
     )
-    if len(rated) >= TOP_N:
-        return rated[:TOP_N]
+    pool_size = min(len(rated), TOP_N * 2)
+    if pool_size >= TOP_N:
+        pool = rated[:pool_size]
+        random.shuffle(pool)
+        return pool[:TOP_N]
 
     # Fill with resources that have cached ratings
     fill = list(
@@ -103,7 +111,10 @@ def _cold_start_recommendations():
         .order_by("-avg_rating", "-browse_count")
         .values_list("id", flat=True)[: TOP_N - len(rated)]
     )
-    return rated + fill
+    pool = rated + fill
+    if len(pool) > TOP_N:
+        random.shuffle(pool)
+    return pool[:TOP_N]
 
 
 def compute_recommendations(user):
