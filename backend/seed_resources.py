@@ -414,3 +414,34 @@ for item in data:
 
 print(f"Created {created} new resources, updated {updated} existing")
 print(f"Total: {Resource.objects.count()} resources")
+
+# ── Seed user behaviors (so collaborative filtering can activate) ──
+all_ids = list(Resource.objects.values_list("id", flat=True))
+users = list(User.objects.all())
+
+for user in users:
+    existing = UserBehavior.objects.filter(user=user).count()
+    if existing >= 15:
+        print(f"User {user.username}: {existing} behaviors (skip)")
+        continue
+
+    # Pick 10-20 resources for this user to simulate engagement
+    n = random.randint(10, 20)
+    picked = random.sample(all_ids, min(n, len(all_ids)))
+
+    for rid in picked:
+        UserBehavior.objects.get_or_create(
+            user=user, resource_id=rid,
+            behavior_type=UserBehavior.BehaviorType.BROWSE,
+        )
+        # 60% chance of also rating
+        if random.random() < 0.6:
+            UserBehavior.objects.get_or_create(
+                user=user, resource_id=rid,
+                behavior_type=UserBehavior.BehaviorType.RATE,
+                defaults={"rating": random.randint(2, 5)},
+            )
+
+    print(f"User {user.username}: {UserBehavior.objects.filter(user=user).count()} behaviors")
+
+print("Behavior seeding complete")
