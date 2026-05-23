@@ -55,7 +55,6 @@ INSTALLED_APPS = [
     "apps.resources",
     "apps.behaviors",
     "apps.recommendations",
-    "apps.ai",
 ]
 
 MIDDLEWARE = [
