@@ -415,31 +415,76 @@ for item in data:
 print(f"Created {created} new resources, updated {updated} existing")
 print(f"Total: {Resource.objects.count()} resources")
 
-# ── Seed user behaviors (so collaborative filtering can activate) ──
-all_ids = list(Resource.objects.values_list("id", flat=True))
-users = list(User.objects.all())
+# ── Create fake users with interest profiles ──
+profiles = [
+    {"username": "alice_py",   "password": "test123", "interests": ["Python", "机器学习", "数据科学"]},
+    {"username": "bob_frontend", "password": "test123", "interests": ["前端", "开发工具", "系统设计"]},
+    {"username": "cathy_algo", "password": "test123", "interests": ["算法", "数据结构", "编译原理"]},
+    {"username": "dave_ops",   "password": "test123", "interests": ["DevOps", "Linux", "后端开发"]},
+    {"username": "eve_security", "password": "test123", "interests": ["信息安全", "计算机网络", "操作系统"]},
+    {"username": "frank_go",   "password": "test123", "interests": ["Go", "Rust", "C++"]},
+    {"username": "grace_ai",   "password": "test123", "interests": ["人工智能", "深度学习", "计算机组成"]},
+    {"username": "henry_db",   "password": "test123", "interests": ["数据库", "Java", "系统设计"]},
+]
 
-for user in users:
+fake_users = []
+for p in profiles:
+    u, is_new = User.objects.get_or_create(username=p["username"], defaults={"email": f"{p['username']}@test.com"})
+    if is_new:
+        u.set_password(p["password"])
+        u.save()
+    fake_users.append((u, p["interests"]))
+    print(f"User {u.username}: {'created' if is_new else 'exists'}")
+
+# ── Seed user behaviors ──
+category_ids = {}
+for r in Resource.objects.all():
+    category_ids.setdefault(r.category, []).append(r.id)
+
+all_ids = list(Resource.objects.values_list("id", flat=True))
+all_users = list(User.objects.all())
+
+for user in all_users:
     existing = UserBehavior.objects.filter(user=user).count()
     if existing >= 15:
         print(f"User {user.username}: {existing} behaviors (skip)")
         continue
 
-    # Pick 10-20 resources for this user to simulate engagement
-    n = random.randint(10, 20)
-    picked = random.sample(all_ids, min(n, len(all_ids)))
+    # Find matching interests for this user
+    interests = None
+    for fu, cats in fake_users:
+        if fu.id == user.id:
+            interests = cats
+            break
+
+    # 70% from interests, 30% random
+    interest_pool = []
+    if interests:
+        for cat in interests:
+            interest_pool.extend(category_ids.get(cat, []))
+    if not interest_pool:
+        interest_pool = list(all_ids)
+    random_pool = [rid for rid in all_ids if rid not in interest_pool]
+
+    n_interest = random.randint(9, 14)
+    n_random = random.randint(3, 6)
+    picked = set(random.sample(interest_pool, min(n_interest, len(interest_pool))))
+    if random_pool:
+        picked |= set(random.sample(random_pool, min(n_random, len(random_pool))))
+    picked = list(picked)
+    random.shuffle(picked)
 
     for rid in picked:
         UserBehavior.objects.get_or_create(
             user=user, resource_id=rid,
             behavior_type=UserBehavior.BehaviorType.BROWSE,
         )
-        # 60% chance of also rating
         if random.random() < 0.6:
+            rating = random.randint(3, 5) if rid in interest_pool else random.randint(1, 5)
             UserBehavior.objects.get_or_create(
                 user=user, resource_id=rid,
                 behavior_type=UserBehavior.BehaviorType.RATE,
-                defaults={"rating": random.randint(2, 5)},
+                defaults={"rating": rating},
             )
 
     print(f"User {user.username}: {UserBehavior.objects.filter(user=user).count()} behaviors")
