@@ -211,11 +211,11 @@ onMounted(async () => {
 })
 
 function onTabChange(name) {
-  if (name === 'history' && !historyList.value.length) {
+  if (name === 'history') {
     behaviorStore.fetchHistory()
-  } else if (name === 'favorites' && !favoritesList.value.length) {
+  } else if (name === 'favorites') {
     behaviorStore.fetchFavorites()
-  } else if (name === 'ratings' && !ratingsList.value.length) {
+  } else if (name === 'ratings') {
     behaviorStore.fetchRatings()
   }
 }
