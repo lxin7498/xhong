@@ -1,10 +1,11 @@
 from rest_framework import status
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from apps.recommendations.engine import get_recommendations, refresh_recommendations
 from apps.recommendations.tasks import schedule_compute, get_status
+from apps.recommendations.evaluation import get_cached_evaluation
 from apps.resources.models import Resource
 from apps.resources.serializers import ResourceListSerializer
 
@@ -61,3 +62,36 @@ class RecommendationRefreshView(APIView):
         data = _build_response(old_result)
         data["computing"] = True
         return Response(data, status=status.HTTP_200_OK)
+
+
+class MetricsView(APIView):
+    """公开端点：返回离线评估指标对比数据，供前端仪表盘使用"""
+    permission_classes = [AllowAny]
+
+    def get(self, request):
+        pop, cf = get_cached_evaluation()
+
+        def _metric_dict(result):
+            return {
+                "precision_5": result.precision_5,
+                "recall_5": result.recall_5,
+                "ndcg_5": result.ndcg_5,
+                "precision_9": result.precision_9,
+                "recall_9": result.recall_9,
+                "ndcg_9": result.ndcg_9,
+                "coverage": result.coverage,
+                "rmse": result.rmse,
+                "cold_start_hit_rate": result.cold_start_hit_rate,
+                "cold_start_count": result.cold_start_count,
+                "cold_start_hit_count": result.cold_start_hit_count,
+                "total_users": result.total_users,
+                "evaluable_users": result.evaluable_users,
+            }
+
+        return Response({
+            "popularity": _metric_dict(pop),
+            "cf": _metric_dict(cf),
+            "cold_start_threshold": 5,
+            "relevance_threshold": 4,
+            "k_values": [5, 9],
+        })

@@ -34,6 +34,11 @@ const routes = [
     component: () => import('@/views/ProfilePage.vue'),
     meta: { requiresAuth: true },
   },
+  {
+    path: '/metrics',
+    name: 'metrics',
+    component: () => import('@/views/MetricsPage.vue'),
+  },
 ]
 
 const router = createRouter({

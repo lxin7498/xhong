@@ -9,6 +9,7 @@
       <nav class="nav-links">
         <router-link to="/" class="nav-link">首页</router-link>
         <router-link to="/resources" class="nav-link">资源广场</router-link>
+        <router-link to="/metrics" class="nav-link">评估仪表盘</router-link>
         <router-link v-if="authStore.isLoggedIn" to="/profile" class="nav-link">个人中心</router-link>
       </nav>
 
