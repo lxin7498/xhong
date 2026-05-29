@@ -19,6 +19,8 @@
           </svg>
         </a>
 
+        <a :href="adminUrl" class="btn-text" title="后台管理">后台</a>
+
         <button class="theme-toggle" @click="appStore.toggleTheme()" :title="isDark ? '切换亮色' : '切换暗色'">
           <span class="material-symbols-outlined">{{ isDark ? 'light_mode' : 'dark_mode' }}</span>
         </button>
@@ -31,9 +33,6 @@
             </span>
             <template #dropdown>
               <el-dropdown-menu>
-                <el-dropdown-item>
-                  <a :href="adminUrl" class="dropdown-link">后台管理</a>
-                </el-dropdown-item>
                 <el-dropdown-item @click="authStore.logout()">
                   <span class="dropdown-link">退出登录</span>
                 </el-dropdown-item>
