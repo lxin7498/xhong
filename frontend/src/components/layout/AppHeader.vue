@@ -31,6 +31,9 @@
             </span>
             <template #dropdown>
               <el-dropdown-menu>
+                <el-dropdown-item>
+                  <a :href="adminUrl" class="dropdown-link">后台管理</a>
+                </el-dropdown-item>
                 <el-dropdown-item @click="authStore.logout()">
                   <span class="dropdown-link">退出登录</span>
                 </el-dropdown-item>
@@ -56,6 +59,9 @@ import { storeToRefs } from 'pinia'
 const appStore = useAppStore()
 const authStore = useAuthStore()
 const { isDark } = storeToRefs(appStore)
+
+const apiBase = import.meta.env.VITE_API_BASE_URL || '/api'
+const adminUrl = apiBase.replace(/\/api\/?$/, '/admin/')
 </script>
 
 <style scoped>

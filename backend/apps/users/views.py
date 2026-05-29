@@ -1,10 +1,33 @@
 from rest_framework import generics, permissions, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework_simplejwt.views import TokenObtainPairView
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from django.contrib.auth.models import User
 
 from .models import UserProfile
 from .serializers import RegisterSerializer, UserProfileSerializer, PasswordChangeSerializer
+
+
+# 自定义登录序列化器，用于在登录响应中返回用户详细信息
+class LoginSerializer(TokenObtainPairSerializer):
+    def validate(self, attrs):
+        data = super().validate(attrs)
+        user = self.user
+        data["user"] = {
+            "id": user.id,
+            "username": user.username,
+            "email": user.email,
+            "is_staff": user.is_staff,
+            "nickname": user.profile.nickname or user.username,
+            "avatar": user.profile.avatar or "",
+        }
+        return data
+
+
+# 登录视图，使用自定义的 LoginSerializer 以返回用户详细信息
+class LoginView(TokenObtainPairView):
+    serializer_class = LoginSerializer
 
 
 class RegisterView(generics.CreateAPIView):
