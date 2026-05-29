@@ -5,7 +5,7 @@ from rest_framework.views import APIView
 
 from apps.recommendations.engine import get_recommendations, refresh_recommendations
 from apps.recommendations.tasks import schedule_compute, get_status
-from apps.recommendations.evaluation import get_cached_evaluation
+from apps.recommendations.evaluation import get_cached_evaluation, run_evaluation
 from apps.resources.models import Resource
 from apps.resources.serializers import ResourceListSerializer
 
@@ -70,7 +70,17 @@ class MetricsView(APIView):
 
     def get(self, request):
         pop, cf = get_cached_evaluation()
+        return self._build_response(pop, cf)
 
+    def post(self, request):
+        """强制重新运行评估（清除缓存）"""
+        from django.core.cache import cache
+        cache.delete("recs:eval:result")
+        pop, cf = run_evaluation()
+        return Response(self._build_response(pop, cf).data)
+
+    @staticmethod
+    def _build_response(pop, cf):
         def _metric_dict(result):
             return {
                 "precision_5": result.precision_5,

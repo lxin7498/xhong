@@ -9,6 +9,10 @@
       <p class="hero-desc">
         离线评估对比：<strong>Popularity 热门推荐</strong>（基线）vs <strong>User-Based CF 协同过滤</strong>
       </p>
+      <button class="btn-refresh" :disabled="refreshing" @click="refreshMetrics">
+        <span class="material-symbols-outlined" :class="{ spinning: refreshing }">sync</span>
+        {{ refreshing ? '重新评估中...' : '重新运行评估' }}
+      </button>
     </section>
 
     <!-- Loading / Error -->
@@ -224,6 +228,7 @@ import Chart from 'chart.js/auto'
 const data = ref(null)
 const loading = ref(true)
 const error = ref(null)
+const refreshing = ref(false)
 
 async function fetchMetrics() {
   loading.value = true
@@ -235,6 +240,19 @@ async function fetchMetrics() {
     error.value = e?.response?.data?.detail || e.message || '无法加载评估数据，请确认后端已运行且数据充足。'
   } finally {
     loading.value = false
+  }
+}
+
+async function refreshMetrics() {
+  refreshing.value = true
+  error.value = null
+  try {
+    const { data: resp } = await client.post('/recommendations/metrics/')
+    data.value = resp
+  } catch (e) {
+    error.value = e?.response?.data?.detail || e.message || '评估刷新失败'
+  } finally {
+    refreshing.value = false
   }
 }
 
@@ -444,6 +462,29 @@ onUnmounted(() => {
   color: var(--color-text-secondary);
   margin-top: var(--space-3);
   font-size: 1rem;
+}
+
+.btn-refresh {
+  margin-top: var(--space-5);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-6);
+  border-radius: var(--radius-full);
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all var(--transition-fast);
+}
+.btn-refresh:hover:not(:disabled) {
+  background: var(--color-primary-dark);
+}
+.btn-refresh:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 /* Loading / Error */
