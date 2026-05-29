@@ -19,11 +19,13 @@
           </svg>
         </a>
 
-        <a :href="adminUrl" class="btn-text" title="后台管理">后台</a>
-
         <button class="theme-toggle" @click="appStore.toggleTheme()" :title="isDark ? '切换亮色' : '切换暗色'">
           <span class="material-symbols-outlined">{{ isDark ? 'light_mode' : 'dark_mode' }}</span>
         </button>
+
+        <a :href="adminUrl" class="icon-btn" title="后台管理">
+          <span class="material-symbols-outlined">admin_panel_settings</span>
+        </a>
 
         <template v-if="authStore.isLoggedIn">
           <el-dropdown trigger="click">
@@ -169,6 +171,26 @@ const adminUrl = apiBase.replace(/\/api\/?$/, '/admin/')
 }
 
 .theme-toggle:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.icon-btn {
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.icon-btn:hover {
   border-color: var(--color-primary);
   color: var(--color-primary);
 }
